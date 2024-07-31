@@ -1,0 +1,17 @@
+Given 2 int arrays, each length 2, return a new array length 4 containing all their elements.
+
+
+plusTwo([1, 2], [3, 4]) → [1, 2, 3, 4]
+plusTwo([4, 4], [2, 2]) → [4, 4, 2, 2]
+plusTwo([9, 2], [3, 4]) → [9, 2, 3, 4]
+public int[] plusTwo(int[] a, int[] b) {
+  int[] ab=new int[a.length+b.length];
+  for(int i=0;i<a.length;i++){
+    ab[i]=a[i];
+  }
+  int i=0;
+  for(int j=a.length;j<ab.length;j++){
+    ab[j]=b[i++];
+  }
+  return ab;
+}
